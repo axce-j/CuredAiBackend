@@ -6,17 +6,9 @@ export class CreateUserDto {
   @IsNotEmpty()
   @IsString()
   @Expose()
-  firstName: string;
+  fullName: string;
   
-  @IsNotEmpty()
-  @IsString()
-  @Expose()
-  middleName: string;
-  
-  @IsNotEmpty()
-  @IsString()
-  @Expose()
-  otherNames: string;
+ 
 
   @IsEmail()
   @Expose()
@@ -27,25 +19,9 @@ export class CreateUserDto {
   @Expose()
   password: string;
   
-  @IsOptional()
-  @IsString()
-  @Expose()
-  image?: string;
   
-  @IsEnum(Role)
-  @Expose()
-  role: Role;
+ 
 
-  // Role-specific fields:
-  @IsOptional()
-  @IsString()
-  @Expose()
-  matriculationId?: string; // for STUDENT
-  
-  @IsOptional()
-  @IsString()
-  @Expose()
-  staffId?: string; // for LECTURER (or ADMIN if desired)
   
   // Two-Factor Authentication flag
   @IsOptional()

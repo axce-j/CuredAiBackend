@@ -8,13 +8,10 @@ export type TwoFactorResponse = {
   
   export type AuthenticatedUser = {
     id: number;
-    firstName: string;
-    middleName: string;
-    otherNames: string;
-    role: string;
+    fullName: string;
+    
     email: string;
-    matriculationId?: string;
-    staffId?: string;
+    
     twoFactorEnabled: boolean;
     // Add more user fields if needed
   };

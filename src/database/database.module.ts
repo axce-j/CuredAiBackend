@@ -4,10 +4,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 
 // Import all entities
 import { User } from 'src/users/entities/user.entity';
-import { Admin } from 'src/users/entities/admin.entity';
-import { Lecturer } from 'src/users/entities/lecturer.entity';
-import { Student } from 'src/users/entities/student.entity';
-import { UserAuthView } from 'src/users/entities/user.auth.view.entity';
+
 import { Auth } from 'src/authentication/auth.entity';
 
 
@@ -21,10 +18,7 @@ import { Auth } from 'src/authentication/auth.entity';
         url: configService.get('RENDER_URL'), // Ensure this is set in the .env file
         entities: [
           User,
-          Admin,
-          Lecturer,
-          Student,
-          UserAuthView, // Added the new user authentication view
+      // Added the new user authentication view
           Auth
           // Address,
           // Posts,
